@@ -56,6 +56,8 @@ def all_supplies_in_holidays(holiday_hash)
   end
 end
 end
+   
+   all_supplies(holiday_supplies)
 
 def all_holidays_with_bbq(holiday_hash)
       holiday_hash.map do |season, holiday|
@@ -64,7 +66,7 @@ def all_holidays_with_bbq(holiday_hash)
     end
   end.flatten.compact
 end
-
+all_holidays_with_bbq(holiday_supplies)
 
 
 
