@@ -39,7 +39,10 @@ holiday_hash[:spring][:memorial_day] << supply
 end
 
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
- 
+ holiday_name, supply_array)
+  
+  holiday_hash[season][holiday_name] = supply_array
+  holiday_hash
 end
 
 def all_winter_holiday_supplies(holiday_hash)
@@ -55,7 +58,10 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
-
+  array = holiday_hash[:winter].map do |holiday, supply|
+    supply
+  end 
+   array.flatten
 end
 
 def all_holidays_with_bbq(holiday_hash)
